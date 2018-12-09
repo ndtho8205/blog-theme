@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{{ partial "head.html" . }}
+
+<body>
+    <div class="posts-list">
+        {{ range .Data.Pages.GroupByDate "2006" -}}
+        <section>
+            <h1 class="site-date-catalog">{{ .Key }}</h1>
+
+            {{ range .Pages -}}
+            <div class="post-line">
+                <div class="posts-date">
+                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02"}}</time>
+                </div>
+                <div class="posts-title">
+                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+                </div>
+            </div>
+            {{ end }}
+        </section>
+        {{ end }}
+    </div>
+</body>
+
+</html>
