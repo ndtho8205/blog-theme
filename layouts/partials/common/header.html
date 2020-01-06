@@ -1,0 +1,16 @@
+<header class="mw8 center mb3-ns mb4-m mb5-l ph4 pt4 pt2-l pb2 flex flex-column flex-row-l justify-between items-center top-0-l bb b--black-10">
+
+  <a class="link dim black mb3 mb0-l" href="{{ .Site.BaseURL }}">
+
+    {{ with .Site.Params.logo }}
+    <img src="{{ . | relURL }}" alt="logo" width="48" class="pa1 v-mid"/>
+    {{ end }}
+
+    <span class="pl1 f3 playfair b tracked-mega v-mid">
+      {{- .Site.Title -}}
+    </span>
+  </a>
+
+  {{- partial "common/_nav.html" . -}}
+
+</header>

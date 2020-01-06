@@ -1,47 +1,23 @@
-<!DOCTYPE html>
-<html lang="en">
-  {{ partial "head.html" . }}
+{{ define "banner" }}
 
-  <body>
-    {{ partial "header.html" . }}
+<section class="">
 
-    <div id="content">
-      <ul class="categories-list">
-        {{ range $key, $value := .Site.Taxonomies.categories }}
-        <li><p class="category-title">{{ $key }}/</p>
-          <ul class="posts-list">
-            {{ range $value.Pages }}
-            <li>{{ .Date.Format "Jan 02, 2006" }} - <a href="{{ .Permalink}}">{{ .LinkTitle }}</a>
-            </li>
-            {{ end }}
-          </ul>
-        </li>
-        {{ end }}
-      </ul>
+</section>
 
-    </div>
+{{ end }}
 
-    {{ partial "footer.html" . }}
 
-    {{ partial "scripts.html" . }}
+{{ define "main" }}
 
-    <!-- <div class="posts-list">
-        {{ range .Data.Pages.GroupByDate "2006" -}}
-        <section>
-            <h1 class="site-date-catalog">{{ .Key }}</h1>
+<section class="">
+  <ul class="list pl0">
+    {{ range (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages }}
+      {{ partial "common/item.html" . }}
+    {{ end }}
+  </ul>
+</section>
 
-            {{ range .Pages -}}
-            <div class="post-line">
-                <div class="posts-date">
-                    <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 02"}}</time>
-                </div>
-                <div class="posts-title">
-                    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
-                </div>
-            </div>
-            {{ end }}
-        </section>
-        {{ end }}
-    </div> -->
-  </body>
-</html>
+{{ partial "common/pagination.html" . }}
+
+
+{{ end }}

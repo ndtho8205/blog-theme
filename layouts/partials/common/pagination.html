@@ -1,0 +1,18 @@
+{{ if gt .Paginator.TotalPages 1 }}
+
+<div class="mt5 flex justify-between">
+  <div class="page-older">
+    {{ if .Paginator.HasNext }}
+    <a class="link black hover-blue underline-hover" href="{{ .Paginator.Next.URL }}">← Older Posts</a>
+    {{ end }}
+  </div>
+
+  <div class="page-newer">
+    {{ if .Paginator.HasPrev }}
+    <a class="link black hover-blue underline-hover" href="{{ .Paginator.Prev.URL }}">Newer Posts →</a>
+    {{ end }}
+  </div>
+
+</div>
+
+{{ end }}

@@ -1,0 +1,17 @@
+<aside class="fs-caption">
+  {{- if .Date -}}
+  <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">
+    {{- .Date.Format "02 Jan 2006" -}}
+  </time>
+  {{- end -}}
+
+  {{- with .Params.tags -}}
+  <ul>
+    {{ range $name := . }}
+      {{ with $.Site.GetPage (printf "/tags/%s" ($name | urlize)) }}
+      <li> <a href="{{ .Permalink }}">{{ $name }}</a> </li>
+      {{ end }}
+    {{ end }}
+  </ul>
+  {{- end -}}
+</aside>

@@ -1,0 +1,7 @@
+<nav class="mv3">
+  {{- range .Site.Menus.main -}}
+  <a class="mh3 black link hover-blue underline-hover f5 b" href="{{ .URL }}">
+    {{- .Name -}}
+  </a>
+  {{- end -}}
+</nav>

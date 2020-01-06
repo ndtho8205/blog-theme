@@ -1,11 +1,11 @@
-name = "ndtho Theme"
+name = "blog-theme"
 license = "MIT"
 licenselink = "https://github.com/ndtho8205/blog-theme/blob/master/LICENSE.md"
 description = ""
 homepage = "http://github.com/ndtho8205/blog-theme"
 tags = []
 features = []
-min_version = "0.41"
+min_version = "0.61"
 
 [author]
   name = "Tho Nguyen"

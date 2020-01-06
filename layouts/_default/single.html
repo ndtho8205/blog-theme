@@ -1,10 +1,7 @@
-<!DOCTYPE html>
-<html>
-  {{- partial "head.html" . -}}
+{{ define "main" }}
 
-  <body>
-    <div id="content">
-      {{ .Content }}
-    </div>
-  </body>
-</html>
+{{ partial "blog/article.html" . }}
+
+{{ partial "blog/comment.html" . }}
+
+{{ end }}
