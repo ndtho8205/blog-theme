@@ -1,7 +1,8 @@
 [build]
   publish = "exampleSite/public"
-  command = "cd exampleSite && hugo --gc --minify --themesDir ../.. --theme blog-theme"
+  command = "cd exampleSite && hugo --gc --minify --themesDir ../.."
 
 [build.environment]
-  HUGO_VERSION = "0.61"
-  HUGO_BASEURL = "/"
+  HUGO_VERSION = "0.62.0"
+  HUGO_THEME = "repo"
+  HUGO_BASEURL = "https://ndtho8205-blog-theme.netlify.com/"
