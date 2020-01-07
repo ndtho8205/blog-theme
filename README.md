@@ -1,10 +1,10 @@
 # blog-theme
 
-## Demo
-
-[View demo](https://blog-theme.netlify.com)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/15afd7b2-191f-4265-93ba-d03ae022ffb7/deploy-status)](https://app.netlify.com/sites/ndtho8205-blog-theme/deploys)
 
 ![Screenshot](./images/screenshot.png)
+
+[View demo](https://ndtho8205-blog-theme.netlify.com)
 
 ## Configurations
 
@@ -20,7 +20,7 @@ googleAnalytics = ""
 paginate = 5
 enableEmoji = true
 
-// pygmentsCodeFences = true
+# pygmentsCodeFences = true
 
 [author]
   name = "Author"
