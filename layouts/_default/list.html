@@ -5,7 +5,7 @@
 <ul>
   {{ range .Paginator.Pages }}
     {{ partial "common/item.html" . }}
-    {{/*  <li>{{- .Date.Format "Jan 02, 2006" }} - <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>  */}}
+    {{/*  <li>{{ .Date.Format "Jan 02, 2006" }} - <a href="{{ .RelPermalink }}">{{ .Title }}</a></li>  */}}
   {{ end }}
 </ul>
 

@@ -1,12 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap&subset=vietnamese");
-@import url("https://fonts.googleapis.com/css?family=Playfair+Display:400,700&display=swap&subset=vietnamese");
+@import "_tachyons";
 
-@import "tachyons/tachyons.scss";
-
-.roboto {
-  font-family: "Roboto", sans-serif;
-}
-
-.playfair {
-  font-family: "Playfair Display", serif;
-}
+@import "custom/_variables";
+@import "custom/_font-family";

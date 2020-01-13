@@ -6,13 +6,13 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
   <title>
-    {{- if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title -}}
+    {{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}
   </title>
 
-  {{- with .Site.Params.favicon -}}
+  {{ with .Site.Params.favicon }}
   <link rel="shortcut icon" href="{{ . }}" type = "image/x-icon" />
   <link rel="icon" href="{{ . }}" type="image/x-icon" />
-  {{- end -}}
+  {{ end }}
 
   {{/*  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>  */}}
   {{ $style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
