@@ -1,0 +1,78 @@
+/* Primary colors */
+
+.primary {
+  color: $primary-color;
+}
+.primary-dark {
+  color: $primary-color-dark;
+}
+.primary-light {
+  color: $primary-color-light;
+}
+
+.bg-primary {
+  background-color: $primary-color;
+}
+.bg-primary-dark {
+  background-color: $primary-color-dark;
+}
+.bg-primary-light {
+  background-color: $primary-color-light;
+}
+
+.hover-primary:hover,
+.hover-primary:focus {
+  color: $primary-color;
+}
+.hover-primary-dark:hover,
+.hover-primary-dark:focus {
+  color: $primary-color-dark;
+}
+.hover-primary-light:hover,
+.hover-primary-light:focus {
+  color: $primary-color-light;
+}
+
+.hover-bg-primary:hover,
+.hover-bg-primary:focus {
+  background-color: $primary-color;
+}
+.hover-bg-primary-dark:hover,
+.hover-bg-primary-dark:focus {
+  background-color: $primary-color-dark;
+}
+.hover-bg-primary-light:hover,
+.hover-bg-primary-light:focus {
+  background-color: $primary-color-light;
+}
+
+/* Secondary color */
+.accent {
+  color: $accent-color;
+}
+
+.bg-accent {
+  background-color: $accent-color;
+}
+
+.hover-accent:hover,
+.hover-accent:focus {
+  color: $accent-color;
+}
+
+/* Text colors */
+
+.tc-primary {
+  color: $text-color-primary;
+}
+.tc-secondary {
+  color: $text-color-secondary;
+}
+.tc-disabled {
+  color: $text-color-disabled;
+}
+
+.hover-white:hover,
+.hover-white:focus {
+  color: white;
+}

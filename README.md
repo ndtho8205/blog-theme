@@ -14,13 +14,10 @@ title = "Example Site"
 languageCode = "en-us"
 theme = "blog-theme"
 
+paginate = 5
 disqusShortname = ""
 googleAnalytics = ""
-
-paginate = 5
 enableEmoji = true
-
-# pygmentsCodeFences = true
 
 [author]
   name = "Author"

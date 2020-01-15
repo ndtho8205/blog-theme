@@ -1,8 +1,15 @@
-// $primary-color: #;
-// $primary-color-dark: #;
-// $primary-color-light: #;
+$primary-color: rgba(0, 0, 0, 0.87);
+$primary-color-dark: rgba(0, 0, 0, 1);
+$primary-color-light: rgba(0, 0, 0, 0.55);
 
-// $accent-color: #;
-// $accent-color-dark: #;
+$accent-color: #00cc6d;
 
-// $divider-color: #;
+$text-color-primary: rgba(0, 0, 0, 0.87);
+$text-color-secondary: rgba(0, 0, 0, 0.71);
+$text-color-disabled: rgba(0, 0, 0, 0.55);
+
+$divider-color: rgba(0, 0, 0, 0.22);
+
+$width-logo: 3.5rem;
+
+$playfair: "Playfair Display", $serif;

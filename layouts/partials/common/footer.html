@@ -1,10 +1,10 @@
-<footer class="mt5 pa4 mid-gray bt b--black-10">
+<footer class="mt5 pa4 mid-gray bt b--divider">
   <div class="f6 tc">
     {{ if .Site.Copyright }}
       {{ .Site.Copyright  | safeHTML }}
     {{ else }}
       &copy; {{ .Site.Author.name }}, {{ now.Format "2006" }}.
-      Built with <a class="link black hover-blue" href="https://gohugo.io/">Hugo</a>.
+      Built with <a class="link tc-primary hover-primary-light" href="https://gohugo.io/">Hugo</a>.
     {{ end }}
   </div>
 </footer>
