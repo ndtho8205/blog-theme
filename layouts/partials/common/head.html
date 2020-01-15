@@ -10,8 +10,8 @@
   </title>
 
   {{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ . }}" type = "image/x-icon" />
-  <link rel="icon" href="{{ . }}" type="image/x-icon" />
+  <link rel="shortcut icon" href="{{ . | absURL }}" type = "image/x-icon" />
+  <link rel="icon" href="{{ . | absURL }}" type="image/x-icon" />
   {{ end }}
 
   {{/*  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>  */}}
