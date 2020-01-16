@@ -1,11 +1,10 @@
 <article class="lh-copy tj">
   <header>
-    <h1 class="playfair f4 f3-m f2-l">{{ .Title }}</h1>
-
     {{ partial "blog/_aside.html" . }}
+    <h1 class="playfair f4 f3-m f2-l ma0 accent-dark">{{ .Title }}</h1>
   </header>
 
-  <div class="">
+  <div class="mt4 mt5-ns">
     {{ .Content }}
   </div>
 </article>

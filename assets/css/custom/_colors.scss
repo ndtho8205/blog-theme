@@ -50,6 +50,9 @@
 .accent {
   color: $accent-color;
 }
+.accent-dark {
+  color: $accent-color-dark;
+}
 
 .bg-accent {
   background-color: $accent-color;
@@ -60,16 +63,27 @@
   color: $accent-color;
 }
 
+.hover-bg-accent:hover,
+.hover-bg-accent:focus {
+  background-color: $accent-color;
+}
+
 /* Text colors */
 
 .tc-primary {
   color: $text-color-primary;
 }
+
 .tc-secondary {
   color: $text-color-secondary;
 }
+
 .tc-disabled {
   color: $text-color-disabled;
+}
+
+.bg-white {
+  background-color: white;
 }
 
 .hover-white:hover,

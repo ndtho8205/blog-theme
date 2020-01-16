@@ -3,6 +3,7 @@ article {
   h3 {
     letter-spacing: $letter-spacing-tight;
     font-weight: 600;
+    color: $accent-color-light;
     &::before {
       color: $accent-color;
       font-weight: 700;

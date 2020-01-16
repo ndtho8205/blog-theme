@@ -1,0 +1,38 @@
+<section class="tc">
+  <img src={{ .Site.Author.avatar | absURL }} class="br-100 pa1 ba b--divider w-avatar mb3">
+
+  <div class="flex justify-between items-center">
+    <div class="tl">
+      <h1 class="pa0 ma0 playfair tracked f3 f2-ns">{{ .Site.Author.name }}</h1>
+
+      {{ range $index, $key := .Site.Author.affiliation }}
+      <ul class="list pa0">
+        <li class="">{{$key.position}}, {{$key.name}}</li>
+        <li class="fw3">{{ $key.contact}}</li>
+      </ul>
+      {{ end }}
+    </div>
+
+
+    <ul class="list">
+      {{ range $index, $key := .Site.Author.social }}
+      <li class="dib">
+        <a href="{{ $key.url }}" title="{{ $key.name }}" class="link dim pa1">
+          <img src="{{ $key.icon | absURL }}" class="w1" />
+        </a>
+      </li>
+      {{ end }}
+
+      <li class="dib">
+        <a href="{{ .Site.BaseURL }}" class="link accent-dark hover-accent dim pa1 f5"><span>[Blog]</span></a>
+      </li>
+    </ul>
+  </div>
+
+</section>
+
+<!-- <section class="">
+  <span>
+    <b>Interests.</b> {{ $.Site.Author.interests | markdownify }}
+  </span>
+</section> -->
