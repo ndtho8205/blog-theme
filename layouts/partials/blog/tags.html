@@ -3,7 +3,7 @@
 <ul class="list pa0 dib">
   {{ range $name := . }}
   {{ with $.Site.GetPage (printf "/tags/%s" ($name | urlize)) }}
-  <li class="dib"> <a class="f6 link ba pa1 dim accent" href="{{ .Permalink }}">{{ $name }}</a> </li>
+  <li class="dib"> <a class="f6 link ba pa1 dim accent-light" href="{{ .Permalink }}">{{ $name }}</a> </li>
   {{ end }}
   {{ end }}
 </ul>

@@ -3,14 +3,3 @@ a {
   @extend .link;
   cursor: pointer;
 }
-
-article a {
-  color: $primary-color-dark;
-  border-bottom: 3px solid $accent-color;
-  font-weight: 600;
-}
-
-article a:hover,
-article a:focus {
-  color: $accent-color;
-}

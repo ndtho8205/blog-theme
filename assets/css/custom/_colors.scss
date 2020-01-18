@@ -50,6 +50,9 @@
 .accent {
   color: $accent-color;
 }
+.accent-light {
+  color: $accent-color-light;
+}
 .accent-dark {
   color: $accent-color-dark;
 }
@@ -60,7 +63,7 @@
 
 .hover-accent:hover,
 .hover-accent:focus {
-  color: $accent-color;
+  color: $accent-color-light;
 }
 
 .hover-bg-accent:hover,
