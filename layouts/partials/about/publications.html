@@ -1,5 +1,5 @@
 <article class="">
-  {{ with .Site.Author.publications }}
+  {{ with .Site.Data.author.publications }}
   <h3>Publications</h3>
   <ul>
     {{ range $elem_index, $publication := . }}
