@@ -16,6 +16,6 @@
 
   {{/*  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>  */}}
   {{ $style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" integrity="{{ $style.Data.Integrity }}" crossorigin="anonymous"/>
+  <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 </head>
