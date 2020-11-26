@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/ndtho8205/blog-theme/issues"
   },
-  "homepage": "https://github.com/ndtho8205/blog-theme#readme",
+  "homepage": "https://ndtho8205-blog-theme.netlify.com",
   "husky": {
     "hooks": {
       "pre-commit": "npm run lint"
@@ -32,6 +32,7 @@
     "npm-run-all": "^4.1.5",
     "postcss": "^8.1.10",
     "postcss-cli": "^8.3.0",
+    "postcss-import": "^13.0.0",
     "prettier": "^2.2.0",
     "prettier-plugin-go-template": "0.0.10",
     "prettier-plugin-tailwind": "^2.2.0",
