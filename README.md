@@ -4,9 +4,13 @@
 
 ![Screenshot](./images/screenshot.png)
 
-[View demo](https://ndtho8205-blog-theme.netlify.com)
+Demo is available [here](https://ndtho8205-blog-theme.netlify.com).
 
-## Configurations
+## Installation
+
+Please refer to the [Hugo documentation](https://gohugo.io/themes/installing/).
+
+## Configuration
 
 ```toml
 baseURL = "https://example.org/"
@@ -15,9 +19,9 @@ languageCode = "en-us"
 theme = "blog-theme"
 
 paginate = 5
+enableEmoji = true
 disqusShortname = ""
 googleAnalytics = ""
-enableEmoji = true
 
 [author]
   name = "Author"
@@ -43,9 +47,3 @@ enableEmoji = true
   tag = "tags"
 
 ```
-
-## Acknowledgments
-
-- [Tachyons](http://tachyons.io/)
-
-  The [Tachyons CSS Library](http://tachyons.io/) is used to build this theme. The library is truly powerful to create responsive interfaces without having to spend too much time writing custom CSS. It absolutely made developing the theme more interesting.

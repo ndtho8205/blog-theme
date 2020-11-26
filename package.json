@@ -1,0 +1,33 @@
+{
+  "name": "blog-theme",
+  "version": "0.0.1",
+  "description": "A Hugo theme for my personal blog.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "npm-run-all --parallel dev:*",
+    "dev:css": "postcss ./assets/css/main.css -o ./static/css/style.css --watch",
+    "dev:hugo": "hugo server --source exampleSite --themesDir ../.. --theme blog-theme",
+    "build": "postcss ./assets/css/main.css -o ./static/css/style.css",
+    "lint": "prettier --write ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ndtho8205/blog-theme.git"
+  },
+  "author": "Tho Nguyen",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ndtho8205/blog-theme/issues"
+  },
+  "homepage": "https://github.com/ndtho8205/blog-theme#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.0.2",
+    "cssnano": "^4.1.10",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.1.10",
+    "postcss-cli": "^8.3.0",
+    "prettier": "^2.2.0",
+    "prettier-plugin-go-template": "0.0.10",
+    "tailwindcss": "^2.0.1"
+  }
+}

@@ -1,11 +1,11 @@
 name = "blog-theme"
 license = "MIT"
 licenselink = "https://github.com/ndtho8205/blog-theme/blob/master/LICENSE.md"
-description = ""
+description = "A Hugo theme for my personal blog."
 homepage = "http://github.com/ndtho8205/blog-theme"
 tags = []
 features = []
-min_version = "0.61"
+min_version = "0.78.1"
 
 [author]
   name = "Tho Nguyen"
