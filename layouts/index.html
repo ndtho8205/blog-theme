@@ -1,19 +1,13 @@
-{{ define "banner" }}
-  {{/*  {{ partial "common/banner.html" . }}  */}}
-{{ end }}
-
+{{ define "banner" }} {{/*  {{ partial "common/banner.html" . }} */}} {{ end }}
 
 {{ define "main" }}
+  <section class="">
+    <ul class="list pl0">
+      {{ range (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages }}
+        {{ partial "common/item.html" . }}
+      {{ end }}
+    </ul>
+  </section>
 
-<section class="">
-  <ul class="list pl0">
-    {{ range (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages }}
-      {{ partial "common/item.html" . }}
-    {{ end }}
-  </ul>
-</section>
-
-{{ partial "common/pagination.html" . }}
-
-
+  {{ partial "common/pagination.html" . }}
 {{ end }}

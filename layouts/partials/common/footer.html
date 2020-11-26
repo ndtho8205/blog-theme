@@ -2,9 +2,11 @@
   <div class="f6 tc tc-secondary">
     {{ if .Site.Copyright }}
       {{ .Site.Copyright  | safeHTML }}
-    {{ else }}
-      &copy; {{ .Site.Author.name }}, {{ now.Format "2006" }}.
-      Built with <a class="link tc-secondary hover-primary-light" href="https://gohugo.io/">Hugo</a>.
+      {{ else }}
+      &copy; {{ .Site.Author.name }}, {{ now.Format "2006" }}. Built with
+      <a class="link tc-secondary hover-primary-light" href="https://gohugo.io/"
+        >Hugo</a
+      >.
     {{ end }}
   </div>
 </footer>

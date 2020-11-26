@@ -1,21 +1,16 @@
 <head>
-
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="author" content="{{ .Site.Author.name }}" />
   <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-  <title>
-    {{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}
-  </title>
+  <title>{{ if not .IsHome }}{{ .Title }} - {{ end }}{{ .Site.Title }}</title>
 
   {{ with .Site.Params.favicon }}
-  <link rel="shortcut icon" href="{{ . | absURL }}" type = "image/x-icon" />
-  <link rel="icon" href="{{ . | absURL }}" type="image/x-icon" />
+    <link rel="shortcut icon" href="{{ . | absURL }}" type="image/x-icon" />
+    <link rel="icon" href="{{ . | absURL }}" type="image/x-icon" />
   {{ end }}
 
-  {{/*  <link rel="stylesheet" href="https://unpkg.com/tachyons@4.10.0/css/tachyons.min.css"/>  */}}
-  {{ $style := resources.Get "css/main.scss" | toCSS | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ $style.Permalink }}" />
-
+  {{ $style := "/css/style.css" | absURL }}
+  <link rel="stylesheet" href="{{ "/css/style.css" | absURL }}" />
 </head>

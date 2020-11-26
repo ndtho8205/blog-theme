@@ -1,6 +1,6 @@
 {{ $main := resources.Get "/js/main.js" | minify | fingerprint }}
 {{ with $main }}
-<script src="{{ $main.Permalink }}">
+  <script src="{{ $main.Permalink }}">
 </script>
 {{ end }}
 

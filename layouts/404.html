@@ -1,11 +1,12 @@
-{{ define "main"}}
+{{ define "main" }}
+  <section class="tc">
+    <p class="pa3 b f2 accent-dark">Page not found</p>
+    <p>Oh, maybe the URL is not correct, or the page is no longer exist.</p>
 
-<section class="tc">
-  <p class="pa3 b f2 accent-dark">Page not found</p>
-  <p>Oh, maybe the URL is not correct, or the page is no longer exist.</p>
-
-  <a class="mt5 pa2 link ba b primary bg-animate bg-white hover-bg-primary hover-white f6 tc-secondary dib" href="{{ .Site.BaseURL }}">Go back to homepage</a>
-
-</section>
-
+    <a
+      class="mt5 pa2 link ba b primary bg-animate bg-white hover-bg-primary hover-white f6 tc-secondary dib"
+      href="{{ .Site.BaseURL }}"
+      >Go back to homepage</a
+    >
+  </section>
 {{ end }}

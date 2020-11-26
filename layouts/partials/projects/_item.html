@@ -1,10 +1,10 @@
 <ul>
   {{ range .projects }}
-  <li>
-    <p>{{ .name }}</p>
-    {{ with .description }}
-    <p class="fw3">{{ . }}</p>
-    {{ end }}
-  </li>
+    <li>
+      <p>{{ .name }}</p>
+      {{ with .description }}
+        <p class="fw3">{{ . }}</p>
+      {{ end }}
+    </li>
   {{ end }}
 </ul>

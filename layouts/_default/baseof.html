@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.LanguageCode }}">
-
   {{ partial "common/head.html" . }}
 
   <body class="w-100 pa2 opensans f6 f5-ns tc-primary">
-
     {{ partial "common/header.html" . }}
 
-    {{ block "banner" . }}
-    {{ end }}
+    {{ block "banner" . }} {{ end }}
 
     <main class="mw7 ph3 center">
-      {{ block "main" . }}
-      {{ end }}
+      {{ block "main" . }} {{ end }}
     </main>
 
     {{ partial "common/footer.html" . }}
@@ -20,7 +16,5 @@
     {{ partial "season/season.html" . }}
 
     {{ partial "common/scripts.html" . }}
-
   </body>
-
 </html>

@@ -1,34 +1,29 @@
 {{ define "main" }}
+  <article class="lh-copy tj">
+    {{ with .Site.Data.projects }}
+      {{ with .working }}
+        <h2>{{ .title }}</h2>
 
-<article class="lh-copy tj">
-  {{ with .Site.Data.projects }}
+        {{ with .sideProjects }}
+          <h3>{{ .title }}</h3>
+          {{ partial "projects/_item.html" . }}
+        {{ end }}
 
-    {{ with .working }}
-      <h2>{{ .title }}</h2>
+        {{ with .blogging }}
+          <h3>{{ .title }}</h3>
+          {{ partial "projects/_item.html" . }}
+        {{ end }}
 
-      {{ with .sideProjects }}
-        <h3>{{ .title }}</h3>
-        {{ partial "projects/_item.html" .}}
+        {{ with .learning }}
+          <h3>{{ .title }}</h3>
+          {{ partial "projects/_item.html" . }}
+        {{ end }}
       {{ end }}
 
-      {{ with .blogging }}
-        <h3>{{ .title }}</h3>
-        {{ partial "projects/_item.html" .}}
+      {{ with .finished }}
+        <h2>{{ .title }}</h2>
+        {{ partial "projects/_item.html" . }}
       {{ end }}
-
-      {{ with .learning }}
-        <h3>{{ .title }}</h3>
-        {{ partial "projects/_item.html" .}}
-      {{ end }}
-
     {{ end }}
-
-    {{ with .finished }}
-      <h2>{{ .title }}</h2>
-      {{ partial "projects/_item.html" .}}
-    {{ end }}
-
-  {{ end }}
-</article>
-
+  </article>
 {{ end }}

@@ -1,12 +1,10 @@
 {{ define "main" }}
-
-<ul>
-  {{ range $key, $value := .Data.Terms }}
-  <li>
-    <a href="{{ $key | urlize }}">{{ $key }}</a>
-    <span class="count">({{ .Count }} entries)</span>
-  </li>
-  {{ end }}
-</ul>
-
+  <ul>
+    {{ range $key, $value := .Data.Terms }}
+      <li>
+        <a href="{{ $key | urlize }}">{{ $key }}</a>
+        <span class="count">({{ .Count }} entries)</span>
+      </li>
+    {{ end }}
+  </ul>
 {{ end }}

@@ -1,38 +1,35 @@
 {{ define "main" }}
-<article class="lh-copy tj">
-  {{ with .Site.Data.reading }}
+  <article class="lh-copy tj">
+    {{ with .Site.Data.reading }}
+      {{ with .reading }}
+        <h2>{{ .title }}</h2>
+        <ul>
+          {{ range .books }}
+            <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
+          {{ end }}
+        </ul>
+      {{ end }}
 
-    {{ with .reading }}
-      <h2>{{ .title }}</h2>
-      <ul>
-        {{ range .books }}
-        <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
-        {{ end }}
-      </ul>
-    {{ end }}
+      {{ with .toRead }}
+        <h2>{{ .title }}</h2>
+        <ul>
+          {{ range .books }}
+            <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
+          {{ end }}
+        </ul>
+      {{ end }}
 
-    {{ with .toRead }}
-      <h2>{{ .title }}</h2>
-      <ul>
-        {{ range .books }}
-        <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
-        {{ end }}
-      </ul>
-    {{ end }}
-
-    {{ with .alreadyRead }}
-      <h2>{{ .title }}</h2>
-        {{ range sort .years ".year" "desc"}}
+      {{ with .alreadyRead }}
+        <h2>{{ .title }}</h2>
+        {{ range sort .years ".year" "desc" }}
           <h3>{{ .year }}</h3>
           <ul>
             {{ range .books }}
-            <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
+              <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
             {{ end }}
           </ul>
         {{ end }}
+      {{ end }}
     {{ end }}
-  {{ end }}
-</article>
-
-
+  </article>
 {{ end }}

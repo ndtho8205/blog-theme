@@ -1,7 +1,5 @@
 {{ define "main" }}
+  {{ partial "blog/article.html" . }}
 
-{{ partial "blog/article.html" . }}
-
-{{ partial "blog/comment.html" . }}
-
+  {{ partial "blog/comment.html" . }}
 {{ end }}

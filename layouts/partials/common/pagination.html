@@ -1,17 +1,23 @@
 {{ if gt .Paginator.TotalPages 1 }}
+  <div class="mt5 flex justify-center justify-end-ns flex-wrap">
+    <div class="ma2">
+      {{ if .Paginator.HasPrev }}
+        <a
+          class="pa2 link ba primary hover-accent f6 tc-secondary db"
+          href="{{ .Paginator.Prev.URL }}"
+          >« Newer Posts</a
+        >
+      {{ end }}
+    </div>
 
-<div class="mt5 flex justify-center justify-end-ns flex-wrap">
-  <div class="ma2">
-    {{ if .Paginator.HasPrev }}
-    <a class="pa2 link ba primary hover-accent f6 tc-secondary db" href="{{ .Paginator.Prev.URL }}">« Newer Posts</a>
-    {{ end }}
+    <div class="ma2">
+      {{ if .Paginator.HasNext }}
+        <a
+          class="pa2 link ba primary hover-accent f6 tc-secondary db"
+          href="{{ .Paginator.Next.URL }}"
+          >Older Posts »</a
+        >
+      {{ end }}
+    </div>
   </div>
-
-  <div class="ma2">
-    {{ if .Paginator.HasNext }}
-    <a class="pa2 link ba primary hover-accent f6 tc-secondary db" href="{{ .Paginator.Next.URL }}">Older Posts »</a>
-    {{ end }}
-  </div>
-</div>
-
 {{ end }}

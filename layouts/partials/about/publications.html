@@ -1,25 +1,27 @@
 <article class="">
   {{ with .Site.Data.author.publications }}
-  <h3>Publications</h3>
-  <ul>
-    {{ range $elem_index, $publication := . }}
-    <li>
-      <p>
-        {{ if $publication.link }}
-          <a href="{{ $publication.link }}" class="publications">{{ $publication.name }},</a>
-        {{ else }}
-          <span class="">{{ $publication.name }},</span>
-        {{ end }}
-        <span class="fw3">{{ $publication.dest | markdownify }}.</span>
-      </p>
+    <h3>Publications</h3>
+    <ul>
+      {{ range $elem_index, $publication := . }}
+        <li>
+          <p>
+            {{ if $publication.link }}
+              <a href="{{ $publication.link }}" class="publications"
+                >{{ $publication.name }},</a
+              >
+              {{ else }}
+              <span class="">{{ $publication.name }},</span>
+            {{ end }}
+            <span class="fw3">{{ $publication.dest | markdownify }}.</span>
+          </p>
 
-      <p>
-        <span class="fw3">
-          {{ $publication.authors | markdownify }}
-        </span>
-      </p>
-    </li>
-    {{ end }}
-  </ul>
+          <p>
+            <span class="fw3">
+              {{ $publication.authors | markdownify }}
+            </span>
+          </p>
+        </li>
+      {{ end }}
+    </ul>
   {{ end }}
 </article>
