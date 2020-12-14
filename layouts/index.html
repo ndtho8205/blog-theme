@@ -2,7 +2,7 @@
 
 {{ define "main" }}
   <section class="">
-    <ul class="list pl0">
+    <ul class="">
       {{ range (.Paginate ( where .Site.RegularPages "Type" "in" site.Params.mainSections )).Pages }}
         {{ partial "common/item.html" . }}
       {{ end }}

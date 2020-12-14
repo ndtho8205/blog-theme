@@ -5,12 +5,12 @@
       {{- range $index, $projects_map := $.Site.Params.projects -}}
         {{ range $elem_index, $project := $projects_map.project }}
           <li>
-            <a href="{{ $project.project_page }}" class="project">
+            <a href="{{ $project.project_page }}" class="">
               {{ $project.name }}</a
             >
 
             {{ if or ($project.code_link) ($project.blog_link) }}
-              <span class="code_blog">
+              <span class="">
                 {{ with $project.code_link }}
                   [<a href="{{ . }}">code</a>]
                 {{ end }}
@@ -22,7 +22,7 @@
             {{ end }}
 
             {{ with $project.description }}
-              <span class="project_description">
+              <span class="">
                 {{ . | markdownify }}
               </span>
             {{ end }}

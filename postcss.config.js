@@ -1,6 +1,6 @@
 const tailwind = require("tailwindcss");
-const autoprefixer = require("autoprefixer");
-const postcss_import = require("postcss-import");
+const postcssPresetEnv = require("postcss-preset-env");
+const postcssImport = require("postcss-import");
 
 const cssnano = require("cssnano")({
   preset: [
@@ -13,13 +13,13 @@ const cssnano = require("cssnano")({
   ],
 });
 
-const isProduction = process.env.HUGO_ENVIRONMENT == "production";
+const isProduction = process.env.NODE_ENV == "production";
 
 const plugins = [
-  postcss_import,
+  postcssImport,
   tailwind,
-  autoprefixer,
-  isProduction && [cssnano],
+  postcssPresetEnv,
+  ...(isProduction ? [cssnano] : []),
 ];
 
 module.exports = { plugins };

@@ -1,11 +1,11 @@
 {{ define "main" }}
-  <article class="lh-copy tj">
+  <article class="">
     {{ with .Site.Data.reading }}
       {{ with .reading }}
         <h2>{{ .title }}</h2>
         <ul>
           {{ range .books }}
-            <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
+            <li>{{ .name }} <span class="">- {{ .author }}</span></li>
           {{ end }}
         </ul>
       {{ end }}
@@ -14,7 +14,7 @@
         <h2>{{ .title }}</h2>
         <ul>
           {{ range .books }}
-            <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
+            <li>{{ .name }} <span class="">- {{ .author }}</span></li>
           {{ end }}
         </ul>
       {{ end }}
@@ -25,7 +25,7 @@
           <h3>{{ .year }}</h3>
           <ul>
             {{ range .books }}
-              <li>{{ .name }} <span class="fw3">- {{ .author }}</span></li>
+              <li>{{ .name }} <span class="">- {{ .author }}</span></li>
             {{ end }}
           </ul>
         {{ end }}

@@ -2,7 +2,7 @@
 
 [![Netlify Status](https://api.netlify.com/api/v1/badges/15afd7b2-191f-4265-93ba-d03ae022ffb7/deploy-status)](https://app.netlify.com/sites/ndtho8205-blog-theme/deploys)
 
-![Screenshot](./images/screenshot.png)
+![Screenshot](./showcase/screenshot.png)
 
 Demo is available [here](https://ndtho8205-blog-theme.netlify.com).
 

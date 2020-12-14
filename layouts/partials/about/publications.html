@@ -6,17 +6,17 @@
         <li>
           <p>
             {{ if $publication.link }}
-              <a href="{{ $publication.link }}" class="publications"
+              <a href="{{ $publication.link }}" class=""
                 >{{ $publication.name }},</a
               >
               {{ else }}
               <span class="">{{ $publication.name }},</span>
             {{ end }}
-            <span class="fw3">{{ $publication.dest | markdownify }}.</span>
+            <span class="">{{ $publication.dest | markdownify }}.</span>
           </p>
 
           <p>
-            <span class="fw3">
+            <span class="">
               {{ $publication.authors | markdownify }}
             </span>
           </p>

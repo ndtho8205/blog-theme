@@ -3,7 +3,7 @@
     {{ range $key, $value := .Data.Terms }}
       <li>
         <a href="{{ $key | urlize }}">{{ $key }}</a>
-        <span class="count">({{ .Count }} entries)</span>
+        <span class="">({{ .Count }} entries)</span>
       </li>
     {{ end }}
   </ul>

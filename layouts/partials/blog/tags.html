@@ -1,11 +1,9 @@
 {{ with .Params.tags }}
-  <ul class="list pa0 dib">
+  <ul class="">
     {{ range $name := . }}
       {{ with $.Site.GetPage (printf "/tags/%s" ($name | urlize)) }}
-        <li class="dib">
-          <a class="f6 link ba pa1 dim accent-light" href="{{ .Permalink }}"
-            >{{ $name }}</a
-          >
+        <li class="">
+          <a class="" href="{{ .Permalink }}">{{ $name }}</a>
         </li>
       {{ end }}
     {{ end }}

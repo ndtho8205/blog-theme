@@ -1,22 +1,14 @@
 {{ if gt .Paginator.TotalPages 1 }}
-  <div class="mt5 justify-end-ns flex flex-wrap justify-center">
-    <div class="ma2">
+  <div class="">
+    <div class="">
       {{ if .Paginator.HasPrev }}
-        <a
-          class="pa2 link ba primary hover-accent f6 tc-secondary db"
-          href="{{ .Paginator.Prev.URL }}"
-          >« Newer Posts</a
-        >
+        <a class="" href="{{ .Paginator.Prev.URL }}">« Newer Posts</a>
       {{ end }}
     </div>
 
-    <div class="ma2">
+    <div class="">
       {{ if .Paginator.HasNext }}
-        <a
-          class="pa2 link ba primary hover-accent f6 tc-secondary db"
-          href="{{ .Paginator.Next.URL }}"
-          >Older Posts »</a
-        >
+        <a class="" href="{{ .Paginator.Next.URL }}">Older Posts »</a>
       {{ end }}
     </div>
   </div>
