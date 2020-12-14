@@ -1,13 +1,24 @@
-<header class="">
-  <a class="" href="{{ .Site.BaseURL }}">
+<header
+  class="flex flex-col items-center border-b border-divider md:flex-row md:justify-between md:pb-3 md:px-4"
+>
+  <a class="flex justify-center" href="{{ .Site.BaseURL }}">
     {{ with .Site.Params.logo }}
-      <img src="{{ . | relURL }}" alt="logo" class="" />
+      <img src="{{ . | relURL }}" alt="logo" class="h-14" />
+      {{ else }}
+      <span class="">
+        {{ .Site.Title }}
+      </span>
     {{ end }}
-
-    <span class="">
-      {{ .Site.Title }}
-    </span>
   </a>
 
-  {{ partial "common/_nav.html" . }}
+  <nav class="justify-center mx-auto my-2 text-center text-gray md:mx-0">
+    {{ range .Site.Menus.main }}
+      <a
+        class="px-2 py-1 text-sm font-medium cursor-pointer uppercase"
+        href="{{ .URL }}"
+      >
+        {{ .Name }}
+      </a>
+    {{ end }}
+  </nav>
 </header>

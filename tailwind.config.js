@@ -14,6 +14,11 @@ module.exports = {
         DEFAULT: "#16A34A",
         dark: "#166534",
       },
+      divider: "#E5E7EB",
+      gray: {
+        DEFAULT: "#6B7280",
+        dark: "#374151",
+      },
     },
     fontFamily: {
       sans: [...defaultTheme.fontFamily.sans],
