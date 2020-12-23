@@ -23,7 +23,7 @@
   "homepage": "https://ndtho8205-blog-theme.netlify.com",
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run build && git add ."
+      "pre-commit": "npm run lint && npm run build && git add ./static/css/"
     }
   },
   "dependencies": {
