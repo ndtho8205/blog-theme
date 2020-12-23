@@ -1,9 +1,7 @@
 const defaultTheme = require("tailwindcss/defaultTheme");
-const colors = require("tailwindcss/colors");
 
 module.exports = {
   purge: {
-    mode: "all",
     content: ["./layouts/**/*.html"],
   },
   darkMode: false,
@@ -21,9 +19,14 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: [...defaultTheme.fontFamily.sans],
+      sans: ["Open Sans"],
       serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
+    },
+    fontWeight: {
+      normal: 400,
+      medium: 600,
+      bold: 700,
     },
     screens: {
       sm: "640px",

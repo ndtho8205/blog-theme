@@ -1,3 +1,9 @@
+code {
+  padding: 0.3em;
+  font-size: 80%;
+  background-color: rgba(27, 31, 35, 0.05);
+}
+
 .chroma .lntable .lntd:nth-child(2) {
   width: 100%;
 }
@@ -16,10 +22,4 @@
   display: block;
   margin: 0;
   line-height: 1.5;
-}
-
-code {
-  padding: 0.3em;
-  font-size: 80%;
-  background-color: rgba(27, 31, 35, 0.05);
 }

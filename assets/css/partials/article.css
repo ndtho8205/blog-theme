@@ -1,0 +1,16 @@
+article h2,
+h3 {
+  @apply mb-1 mt-2 text-primary-dark text-lg font-medium;
+}
+
+article h2::before {
+  @apply text-primary text-sm font-medium;
+
+  content: "#";
+  margin-right: 3px;
+  margin-left: -12px;
+}
+
+article div a {
+  @apply text-primary font-medium border-b border-primary;
+}

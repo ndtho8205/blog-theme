@@ -1,27 +1,25 @@
-<article class="">
-  {{ with .Site.Data.author.publications }}
-    <h3>Publications</h3>
-    <ul>
-      {{ range $elem_index, $publication := . }}
-        <li>
-          <p>
-            {{ if $publication.link }}
-              <a href="{{ $publication.link }}" class=""
-                >{{ $publication.name }},</a
-              >
-              {{ else }}
-              <span class="">{{ $publication.name }},</span>
-            {{ end }}
-            <span class="">{{ $publication.dest | markdownify }}.</span>
-          </p>
+<section class="my-4">
+  {{ with .Site.Data.author.publication }}
+    <h2 class="mb-2 text-primary-dark font-bold">Selected Publications</h2>
 
-          <p>
-            <span class="">
-              {{ $publication.authors | markdownify }}
-            </span>
-          </p>
+    <ul class="list-inside list-disc">
+      {{ range $elem_index, $publication := . }}
+        <li class="flex flex-col mb-1">
+          {{ if $publication.link }}
+            <a href="{{ $publication.link }}" class=""
+              >{{ $publication.name }}</a
+            >
+            {{ else }}
+            <span class="">{{ $publication.name }}</span>
+          {{ end }}
+          <span class="text-gray text-sm"
+            >{{ $publication.dest | markdownify }}.</span
+          >
+          <span class="text-gray text-sm"
+            >{{ $publication.authors | markdownify }}</span
+          >
         </li>
       {{ end }}
     </ul>
   {{ end }}
-</article>
+</section>

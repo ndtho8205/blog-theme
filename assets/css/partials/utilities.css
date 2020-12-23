@@ -1,0 +1,7 @@
+a {
+  @apply cursor-pointer;
+}
+
+kbd {
+  @apply inline-block m-1 px-1 text-gray text-sm font-medium border border-gray-dark rounded-md;
+}

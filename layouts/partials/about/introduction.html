@@ -4,39 +4,40 @@
   {{ $baseURL := .Site.BaseURL }}
 
   {{ with .Site.Data.author }}
-    <img src="{{ $avatar | absURL }}" class="" />
+    <img
+      src="{{ $avatar | absURL }}"
+      class="mx-auto p-1 w-36 border border-divider rounded-full"
+    />
 
-    <div class="">
-      <div class="">
-        <h1 class="">{{ $name }}</h1>
+    <h1 class="text-black text-center font-serif text-2xl font-bold">
+      {{ $name }}
+    </h1>
 
-        {{ range $index, $key := .affiliation }}
-          <ul class="">
-            <li class="">{{ $key.position }}, {{ $key.name }}</li>
-            <li class="">{{ $key.contact }}</li>
-          </ul>
+    <div class="flex">
+      <div class="flex-grow text-sm">
+        {{ with .affiliation }}
+          <p class="">{{ .position }}, {{ .name }}</p>
+          <p class="">{{ .contact }}</p>
         {{ end }}
       </div>
 
-      <ul class="">
+      <ul class="text-center">
         {{ range $index, $key := .social }}
-          <li class="">
-            <a href="{{ $key.url }}" title="{{ $key.name }}" class="">
-              <img src="{{ $key.icon | absURL }}" class="" />
+          <li class="inline-block">
+            <a
+              href="{{ $key.url }}"
+              title="{{ $key.name }}"
+              class="inline-block"
+            >
+              <img src="{{ $key.icon | absURL }}" class="w-4 opacity-70" />
             </a>
           </li>
         {{ end }}
 
-        <li class="">
-          <a href="{{ $baseURL }}" class=""><span>[Blog]</span></a>
+        <li class="inline-block">
+          <a href="{{ $baseURL }}" class=""><span>Blog</span></a>
         </li>
       </ul>
     </div>
   {{ end }}
 </section>
-
-<!-- <section class="">
-  <span>
-    <b>Interests.</b> {{ $.Site.Author.interests | markdownify }}
-  </span>
-</section> -->
