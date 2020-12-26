@@ -1,16 +1,14 @@
-article h2,
-h3 {
-  @apply mb-1 mt-2 text-primary-dark text-lg font-medium;
-}
+.prose {
+  & h2,
+  & h3 {
+    @apply text-primary-dark;
+  }
 
-article h2::before {
-  @apply text-primary text-sm font-medium;
+  & h2::before {
+    @apply text-primary text-sm font-medium;
 
-  content: "#";
-  margin-right: 3px;
-  margin-left: -12px;
-}
-
-article div a {
-  @apply text-primary font-medium border-b border-primary;
+    content: "#";
+    margin-right: 3px;
+    margin-left: -12px;
+  }
 }

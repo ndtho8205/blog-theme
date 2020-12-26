@@ -1,12 +1,12 @@
 {{ if gt .Paginator.TotalPages 1 }}
-  <div class="">
+  <div class="mt-8 text-sm flex">
     <div class="">
       {{ if .Paginator.HasPrev }}
         <a class="" href="{{ .Paginator.Prev.URL }}">« Newer Posts</a>
       {{ end }}
     </div>
 
-    <div class="">
+    <div class="ml-auto">
       {{ if .Paginator.HasNext }}
         <a class="" href="{{ .Paginator.Next.URL }}">Older Posts »</a>
       {{ end }}

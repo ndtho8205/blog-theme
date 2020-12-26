@@ -2,7 +2,7 @@
   <ul class="">
     {{ range $name := . }}
       {{ with $.Site.GetPage (printf "/tags/%s" ($name | urlize)) }}
-        <li class="">
+        <li class="inline-block border border-primary text-primary px-1 rounded-md text-sm">
           <a class="" href="{{ .Permalink }}">{{ $name }}</a>
         </li>
       {{ end }}

@@ -1,8 +1,6 @@
 const tailwind = require("tailwindcss");
 const postcssPresetEnv = require("postcss-preset-env")({
-  fetures: {
-    "nesting-rules": true,
-  },
+  stage: 0,
 });
 
 const postcssImport = require("postcss-import");
