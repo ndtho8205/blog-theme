@@ -1,0 +1,19 @@
+<section class="mb-8">
+  {{ with .Site.Data.author.education }}
+    <h2 class="mb-2 text-primary-dark font-bold">Education</h2>
+
+    <ul class="">
+      {{ range $elem_index, $edu := . }}
+        <li class="flex flex-col mb-4">
+          <span class="">{{ $edu.degree }} - {{ $edu.major }}</span>
+          <span class="text-gray text-sm"
+            >{{ $edu.school | markdownify }}.</span
+          >
+          <span class="text-gray text-sm"
+            >{{ $edu.authors | markdownify }}</span
+          >
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</section>

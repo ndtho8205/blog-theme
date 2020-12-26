@@ -2,8 +2,10 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "common/head.html" . }}
 
-  <body class="text-gray-dark text-base">
+  <body class="mx-auto px-4 text-gray-dark text-base sm:max-w-3xl">
     {{ partial "about/introduction.html" . }}
+
+    {{ partial "about/education.html" . }}
 
     {{ partial "about/publications.html" . }}
 

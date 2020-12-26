@@ -1,10 +1,10 @@
-<section class="my-4">
+<section class="mb-8">
   {{ with .Site.Data.author.publication }}
     <h2 class="mb-2 text-primary-dark font-bold">Selected Publications</h2>
 
-    <ul class="list-inside list-disc">
+    <ul class="">
       {{ range $elem_index, $publication := . }}
-        <li class="flex flex-col mb-1">
+        <li class="flex flex-col mb-4">
           {{ if $publication.link }}
             <a href="{{ $publication.link }}" class=""
               >{{ $publication.name }}</a

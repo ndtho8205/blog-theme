@@ -1,4 +1,4 @@
-<section class="">
+<section class="mb-4 mt-8">
   {{ $avatar := .Site.Author.avatar }}
   {{ $name := .Site.Author.name }}
   {{ $baseURL := .Site.BaseURL }}
@@ -9,12 +9,12 @@
       class="mx-auto p-1 w-36 border border-divider rounded-full"
     />
 
-    <h1 class="text-black text-center font-serif text-2xl font-bold">
+    <h1 class="text-black mb-6 mt-2 text-center font-serif text-2xl font-bold">
       {{ $name }}
     </h1>
 
-    <div class="flex">
-      <div class="flex-grow text-sm">
+    <div class="flex flex-wrap">
+      <div class="flex-grow mb-2 text-sm">
         {{ with .affiliation }}
           <p class="">{{ .position }}, {{ .name }}</p>
           <p class="">{{ .contact }}</p>
@@ -23,7 +23,7 @@
 
       <ul class="text-center">
         {{ range $index, $key := .social }}
-          <li class="inline-block">
+          <li class="inline-block align-middle pr-1">
             <a
               href="{{ $key.url }}"
               title="{{ $key.name }}"
