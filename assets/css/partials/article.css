@@ -1,4 +1,8 @@
 .prose {
+  & p {
+    text-align: justify;
+  }
+
   & h2,
   & h3 {
     @apply text-primary-dark;

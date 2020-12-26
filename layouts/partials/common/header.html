@@ -15,7 +15,10 @@
 
   <nav class="text-center text-gray text-sm font-medium uppercase sm:ml-auto">
     {{ range .Site.Menus.main }}
-    <a class="mx-1 px-1 hover:text-primary focus:text-primary" href="{{ .URL }}">
+      <a
+        class="mx-1 px-1 hover:text-primary focus:text-primary"
+        href="{{ .URL }}"
+      >
         {{ .Name }}
       </a>
     {{ end }}
