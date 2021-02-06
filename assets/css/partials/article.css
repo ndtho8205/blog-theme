@@ -1,18 +1,37 @@
-.prose {
+article {
   & p {
     text-align: justify;
   }
 
   & h2,
   & h3 {
-    @apply text-primary-dark;
+    @apply text-primary-dark font-medium;
   }
 
-  & h2::before {
-    @apply text-primary text-sm font-medium;
+  & h2 {
+    @apply mb-4 mt-8 text-lg;
 
-    content: "#";
-    margin-right: 3px;
-    margin-left: -12px;
+    &::before {
+      @apply text-primary text-sm font-medium;
+
+      content: "#";
+      margin-right: 3px;
+      margin-left: -12px;
+    }
+  }
+
+  & h3 {
+    @apply mb-2 mt-4;
+  }
+
+  & ul > li {
+    @apply relative pl-4;
+  }
+
+  & ul > li::before {
+    @apply absolute left-0 w-2 h-2 bg-gray rounded-full opacity-30;
+
+    content: "";
+    top: calc(1rem - 0.5rem);
   }
 }

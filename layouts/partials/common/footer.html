@@ -1,8 +1,10 @@
-<footer class="py-6 text-center text-gray text-sm border-t border-divider">
-  {{ if .Site.Copyright }}
-    {{ .Site.Copyright  | safeHTML }}
-    {{ else }}
-    &copy; {{ .Site.Author.name }}, {{ now.Format "2006" }}. Built with
-    <a class="" href="https://gohugo.io/">Hugo</a>.
-  {{ end }}
+<footer class="py-6 border-t border-divider">
+  <p class="text-center text-gray text-sm">
+    {{ if .Site.Copyright }}
+      {{ .Site.Copyright  | safeHTML }}
+      {{ else }}
+      &copy; {{ .Site.Author.name }}, {{ now.Format "2006" }}. Built with
+      <a class="link border-b" href="https://gohugo.io/">Hugo</a>.
+    {{ end }}
+  </p>
 </footer>

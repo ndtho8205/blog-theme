@@ -2,16 +2,18 @@
 <html lang="{{ .Site.LanguageCode }}">
   {{ partial "common/head.html" . }}
 
-  <body class="mx-auto px-4 text-gray-dark text-base sm:max-w-3xl">
-    {{ partial "about/introduction.html" . }}
+  <body>
+    <main class="mx-auto px-3 py-8 sm:max-w-3xl">
+      {{ partial "about/introduction.html" . }}
 
-    {{ partial "about/education.html" . }}
+      {{ partial "about/education.html" . }}
 
-    {{ partial "about/publications.html" . }}
+      {{ partial "about/publications.html" . }}
 
-    <!-- {{ partial "about/education.html" . }}
-      {{ partial "about/projects.html" . }}
+      <!-- {{ partial "about/education.html" . }}
+        {{ partial "about/projects.html" . }}
 
-    {{ partial "common/scripts.html" . }} -->
+      {{ partial "common/scripts.html" . }} -->
+    </main>
   </body>
 </html>

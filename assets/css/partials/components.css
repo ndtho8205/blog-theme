@@ -1,0 +1,5 @@
+@layer components {
+  .link {
+    @apply hover:text-primary-dark focus:text-primary-dark border-b-2 hover:border-primary focus:border-primary;
+  }
+}

@@ -1,35 +1,38 @@
 {{ define "main" }}
-  <article class="prose prose-lg">
-    {{ with .Site.Data.reading }}
+  {{ with .Site.Data.reading }}
+    <article class="">
       {{ with .reading }}
-        <h2>{{ .title }}</h2>
-        <ul>
-          {{ range .books }}
-            <li>{{ .name }} <span class="">- {{ .author }}</span></li>
-          {{ end }}
-        </ul>
+        <section>
+          <header>
+            <h2>{{ .title }}</h2>
+          </header>
+
+          {{ partial "reading/books.html" . }}
+        </section>
       {{ end }}
 
       {{ with .toRead }}
-        <h2>{{ .title }}</h2>
-        <ul>
-          {{ range .books }}
-            <li>{{ .name }} <span class="">- {{ .author }}</span></li>
-          {{ end }}
-        </ul>
+        <section>
+          <header>
+            <h2>{{ .title }}</h2>
+          </header>
+
+          {{ partial "reading/books.html" . }}
+        </section>
       {{ end }}
 
       {{ with .alreadyRead }}
-        <h2>{{ .title }}</h2>
-        {{ range sort .years ".year" "desc" }}
-          <h3>{{ .year }}</h3>
-          <ul>
-            {{ range .books }}
-              <li>{{ .name }} <span class="">- {{ .author }}</span></li>
-            {{ end }}
-          </ul>
-        {{ end }}
+        <section>
+          <header>
+            <h2>{{ .title }}</h2>
+          </header>
+
+          {{ range sort .years ".year" "desc" }}
+            <h3>{{ .year }}</h3>
+            {{ partial "reading/books.html" . }}
+          {{ end }}
+        </section>
       {{ end }}
-    {{ end }}
-  </article>
+    </article>
+  {{ end }}
 {{ end }}

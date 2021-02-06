@@ -1,0 +1,10 @@
+<ul>
+  {{ range .books }}
+    <li class="group mb-3">
+      <span class="group-hover:font-medium">{{ .name }}</span
+      ><span class="pl-2 text-gray group-hover:text-gray-dark"
+        >- {{ .author }}</span
+      >
+    </li>
+  {{ end }}
+</ul>

@@ -7,6 +7,7 @@ module.exports = {
   darkMode: false,
   theme: {
     colors: {
+      transparent: "transparent",
       primary: {
         light: "#4ADE80",
         DEFAULT: "#16A34A",
@@ -19,7 +20,7 @@ module.exports = {
       },
     },
     fontFamily: {
-      sans: ["Open Sans"],
+      sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       serif: [...defaultTheme.fontFamily.serif],
       mono: [...defaultTheme.fontFamily.mono],
     },
@@ -33,28 +34,11 @@ module.exports = {
       md: "1024px",
       lg: "1280px",
     },
+  },
+  variants: {
     extend: {
-      typography: (theme) => ({
-        DEFAULT: {
-          css: {
-            a: {
-              color: theme("colors.primary.DEFAULT"),
-              textDecoration: "none",
-              fontWeight: "600",
-              borderBottomWidth: 2,
-              borderBottomColor: theme("colors.primary.DEFAULT"),
-              "&:hover": {
-                color: theme("colors.primary.dark"),
-              },
-            },
-            pre: {
-              backgroundColor: "rgba(27, 31, 35, 0.05)",
-            },
-          },
-        },
-      }),
+      fontWeight: ["group-hover"],
     },
   },
-  variants: {},
   plugins: [require("@tailwindcss/typography")],
 };
