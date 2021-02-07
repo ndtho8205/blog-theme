@@ -7,14 +7,12 @@
 
     {{ block "banner" . }} {{ end }}
 
-    <main class="mb-12 mt-12 mx-auto px-4 max-w-xl sm:max-w-2xl md:max-w-3xl">
+    <main
+      class="flex-grow mb-12 mt-12 mx-auto px-4 max-w-xl sm:max-w-2xl md:max-w-3xl"
+    >
       {{ block "main" . }} {{ end }}
     </main>
 
     {{ partial "common/footer.html" . }}
-
-    {{ partial "season/season.html" . }}
-
-    {{ partial "common/scripts.html" . }}
   </body>
 </html>
