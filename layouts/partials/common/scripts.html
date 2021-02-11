@@ -1,7 +1,4 @@
 {{ $main := resources.Get "/js/main.js" | minify | fingerprint }}
 {{ with $main }}
-  <script src="{{ $main.Permalink }}">
-</script>
+  <script src="{{ $main.Permalink }}"></script>
 {{ end }}
-
-{{ template "_internal/google_analytics_async.html" . }}
