@@ -1,17 +1,20 @@
 <section class="mb-8">
   {{ with .Site.Data.author.education }}
-    <header class="mb-2">
-      <h2 class="text-primary-dark font-bold">Education</h2>
+    <header class="mb-3">
+      <h2 class="text-primary-dark text-lg font-bold">Education</h2>
     </header>
 
     <ul class="">
-      {{ range $elem_index, $edu := . }}
+      {{ range $edu := . }}
         <li class="flex flex-col mb-3">
-          <span class="mb-0.5">{{ $edu.degree }} - {{ $edu.major }}</span>
-          <span class="text-gray text-sm">{{ $edu.school | markdownify }}</span>
-          <span class="text-gray text-sm"
-            >{{ $edu.authors | markdownify }}</span
-          >
+          <div class="flex flex-col items-baseline justify-between sm:flex-row">
+            <span class="mb-0.5 font-medium">{{ $edu.degree }}</span>
+            <span class="mb-0.5 font-mono text-sm"
+              >{{ $edu.from }} - {{ $edu.to }}</span
+            >
+          </div>
+          <span class="text-gray text-sm">{{ $edu.major }}</span>
+          <span class="text-gray text-sm">{{ $edu.school }}</span>
         </li>
       {{ end }}
     </ul>

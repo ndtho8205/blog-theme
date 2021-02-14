@@ -17,9 +17,10 @@
     </header>
 
     <div class="flex flex-wrap">
-      <div class="flex-grow mb-2 text-sm">
-        {{ with .affiliation }}
-          <p class="">{{ .position }}, {{ .name }}</p>
+      <div class="flex-grow mb-2 mr-3 text-sm">
+        {{ with .summary }}
+          <p class="">{{ .job_title }}</p>
+          <p class="">{{ .position }}, {{ .university }}</p>
           <p class="">{{ .contact }}</p>
         {{ end }}
       </div>

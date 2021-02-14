@@ -1,0 +1,24 @@
+<section class="mb-8">
+  {{ with .Site.Data.author.work_experience }}
+    <header class="mb-3">
+      <h2 class="text-primary-dark text-lg font-bold">Work Experience</h2>
+    </header>
+
+    <ul class="">
+      {{ range $exp := . }}
+        <li class="flex flex-col mb-3">
+          <div class="flex flex-col items-baseline justify-between sm:flex-row">
+            <p class="mb-0.5 font-medium">
+              <span class="">{{ $exp.title }}</span>
+              <span class="text-gray">@ {{ $exp.company }}</span>
+            </p>
+            <span class="mb-0.5 font-mono text-sm"
+              >{{ $exp.from }} - {{ $exp.to }}</span
+            >
+          </div>
+          <span class="text-gray text-sm">{{ $exp.type }}</span>
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</section>

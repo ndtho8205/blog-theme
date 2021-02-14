@@ -1,0 +1,28 @@
+<section class="mb-8">
+  {{ with .Site.Data.author.skills }}
+    <header class="mb-3">
+      <h2 class="text-primary-dark text-lg font-bold">Skills</h2>
+    </header>
+
+    <ul class="">
+      {{ range $skill := . }}
+        <li class="flex flex-col mb-3">
+          <span class="mb-0.5 font-medium">{{ $skill.title }}</span>
+
+          {{ with $skill.categories }}
+            <ul class="list-inside list-disc">
+              {{ range $category := . }}
+                <li class="text-sm">
+                  <span class="mb-0.5">{{ .title }}:</span>
+                  <span class="text-gray">{{ delimit .items ", " }}</span>
+                </li>
+              {{ end }}
+            </ul>
+            {{ else }}
+            <span class="text-gray text-sm">{{ delimit .items ", " }}</span>
+          {{ end }}
+        </li>
+      {{ end }}
+    </ul>
+  {{ end }}
+</section>

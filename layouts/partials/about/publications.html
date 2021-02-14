@@ -1,11 +1,11 @@
 <section class="mb-8">
   {{ with .Site.Data.author.publication }}
-    <header class="mb-2">
-      <h2 class="text-primary-dark font-bold">Selected Publications</h2>
+    <header class="mb-3">
+      <h2 class="text-primary-dark text-lg font-bold">Selected Publications</h2>
     </header>
 
     <ul class="">
-      {{ range $elem_index, $publication := . }}
+      {{ range $publication := . }}
         <li class="flex flex-col mb-3">
           {{ if $publication.link }}
             <a href="{{ $publication.link }}" class="mb-0.5"
