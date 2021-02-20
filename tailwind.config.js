@@ -22,7 +22,7 @@ module.exports = {
     fontFamily: {
       sans: ["Open Sans", ...defaultTheme.fontFamily.sans],
       serif: [...defaultTheme.fontFamily.serif],
-      mono: [...defaultTheme.fontFamily.mono],
+      mono: ["ui-monospace", "Consolas", "Monaco", "monospace"],
     },
     fontWeight: {
       normal: 400,
